@@ -1,0 +1,1 @@
+function e(e){return e>=1e7?`₹${(e/1e7).toFixed(2)}Cr`:e>=1e5?`₹${(e/1e5).toFixed(2)}L`:e>=1e3?`₹${(e/1e3).toFixed(1)}K`:`₹${e.toLocaleString(`en-IN`)}`}function t(e){return e>=1e6?`${(e/1e6).toFixed(2)}M`:e>=1e3?`${(e/1e3).toFixed(1)}K`:e.toLocaleString(`en-IN`)}export{t as n,e as t};
