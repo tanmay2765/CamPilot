@@ -47,9 +47,10 @@ def health_check():
     # Test database connectivity
     db_status = "connected"
     try:
+        from sqlalchemy import text
         from database.connection import SessionLocal
         db = SessionLocal()
-        db.execute("SELECT 1")
+        db.execute(text("SELECT 1"))
         db.close()
     except Exception:
         db_status = "disconnected"
