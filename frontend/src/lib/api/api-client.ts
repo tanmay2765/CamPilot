@@ -1,10 +1,9 @@
 // Central API client — all backend calls go through here.
-// In dev, requests go through Vite proxy (/api → Render) to bypass CORS.
-// In production, requests go directly to VITE_API_BASE_URL.
+// All requests go through /api/* which is proxied to the Render backend:
+//   - Dev: Vite proxy (/api → campaign-copilot.onrender.com)
+//   - Production: Vercel rewrites (/api → campaign-copilot.onrender.com)
 
-const BASE_URL = import.meta.env.DEV
-  ? "/api"
-  : (import.meta.env.VITE_API_BASE_URL ?? "https://campaign-copilot.onrender.com");
+const BASE_URL = "/api";
 
 export class ApiError extends Error {
   constructor(

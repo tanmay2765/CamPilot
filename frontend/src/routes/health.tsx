@@ -27,11 +27,8 @@ function HealthPage() {
 
   // Measure actual API latency
   useEffect(() => {
-    const baseUrl = import.meta.env.DEV
-      ? "/api"
-      : (import.meta.env.VITE_API_BASE_URL ?? "https://campaign-copilot.onrender.com");
     const start = performance.now();
-    fetch(`${baseUrl}/health`)
+    fetch("/api/health")
       .then(() => {
         setLatency(Math.round(performance.now() - start));
       })
