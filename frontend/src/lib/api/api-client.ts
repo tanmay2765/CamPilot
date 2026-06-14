@@ -30,17 +30,24 @@ async function handleResponse<T>(response: Response): Promise<T> {
   return response.json() as Promise<T>;
 }
 
+function buildUrl(path: string, params?: Record<string, string | number | undefined>): string {
+  const fullPath = `${BASE_URL}${path}`;
+  const searchParams = new URLSearchParams();
+  if (params) {
+    Object.entries(params).forEach(([key, value]) => {
+      if (value !== undefined && value !== null && value !== "") {
+        searchParams.set(key, String(value));
+      }
+    });
+  }
+  const qs = searchParams.toString();
+  return qs ? `${fullPath}?${qs}` : fullPath;
+}
+
 export const apiClient = {
   async get<T>(path: string, params?: Record<string, string | number | undefined>): Promise<T> {
-    const url = new URL(`${BASE_URL}${path}`);
-    if (params) {
-      Object.entries(params).forEach(([key, value]) => {
-        if (value !== undefined && value !== null && value !== "") {
-          url.searchParams.set(key, String(value));
-        }
-      });
-    }
-    const response = await fetch(url.toString(), {
+    const url = buildUrl(path, params);
+    const response = await fetch(url, {
       headers: { Accept: "application/json" },
     });
     return handleResponse<T>(response);
@@ -58,3 +65,4 @@ export const apiClient = {
     return handleResponse<T>(response);
   },
 };
+

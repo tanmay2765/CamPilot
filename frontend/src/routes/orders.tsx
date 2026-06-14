@@ -4,7 +4,8 @@ import { ShoppingCart, IndianRupee, Repeat, Sparkles, Loader2, AlertTriangle, Ch
 import { BarChart, Bar, XAxis, YAxis, ResponsiveContainer, Tooltip, LineChart, Line, CartesianGrid } from "recharts";
 import { AppLayout } from "@/components/app-layout";
 import { KpiCard, SectionCard, Badge } from "@/components/ui-bits";
-import { revenueTrend, inr } from "@/lib/mock-data";
+import { revenueTrend } from "@/lib/static-data";
+import { inr } from "@/lib/utils";
 import { useDashboardSummary } from "@/hooks/use-dashboard";
 import { useOrders } from "@/hooks/use-orders";
 

@@ -3,7 +3,7 @@ import { useState, useDeferredValue } from "react";
 import { Search, Filter, Download, MoreHorizontal, X, Mail, Phone, MapPin, Sparkles, Loader2, ChevronLeft, ChevronRight, AlertTriangle } from "lucide-react";
 import { AppLayout } from "@/components/app-layout";
 import { SectionCard, Badge, segmentTone } from "@/components/ui-bits";
-import { inr } from "@/lib/mock-data";
+import { inr } from "@/lib/utils";
 import { useCustomers, useCustomerSummary, useCustomerOrders } from "@/hooks/use-customers";
 import type { ApiCustomer } from "@/lib/api/types";
 

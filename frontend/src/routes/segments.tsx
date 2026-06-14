@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { Sparkles, ArrowUpRight, Users, IndianRupee, Target, TrendingUp, Loader2, AlertTriangle } from "lucide-react";
 import { AppLayout } from "@/components/app-layout";
 import { SectionCard, Badge } from "@/components/ui-bits";
-import { inr, num } from "@/lib/mock-data";
+import { inr, num } from "@/lib/utils";
 import { useSegmentStats } from "@/hooks/use-segments";
 import { useCustomers } from "@/hooks/use-customers";
 

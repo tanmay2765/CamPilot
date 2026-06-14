@@ -4,7 +4,7 @@ import { Plus, Play, Eye, Loader2, MailCheck, MousePointerClick, Send, AlertTria
 import { toast } from "sonner";
 import { AppLayout } from "@/components/app-layout";
 import { SectionCard, Badge, segmentTone } from "@/components/ui-bits";
-import { num } from "@/lib/mock-data";
+import { num } from "@/lib/utils";
 import { useCampaigns, useCampaignAnalytics, useExecuteCampaign } from "@/hooks/use-campaigns";
 import type { ApiCampaign } from "@/lib/api/types";
 

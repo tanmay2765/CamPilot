@@ -9,7 +9,8 @@ import {
 } from "recharts";
 import { AppLayout } from "@/components/app-layout";
 import { KpiCard, SectionCard } from "@/components/ui-bits";
-import { revenueTrend, activities, inr, num } from "@/lib/mock-data";
+import { revenueTrend, activities } from "@/lib/static-data";
+import { inr, num } from "@/lib/utils";
 import { useDashboardSummary } from "@/hooks/use-dashboard";
 
 export const Route = createFileRoute("/")(  {

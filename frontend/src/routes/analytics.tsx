@@ -3,7 +3,8 @@ import { Send, MailCheck, MousePointerClick, AlertTriangle, Users, Loader2 } fro
 import { AreaChart, Area, BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, CartesianGrid } from "recharts";
 import { AppLayout } from "@/components/app-layout";
 import { KpiCard, SectionCard } from "@/components/ui-bits";
-import { openRateTrend, ctrTrend, channelPerformance, num } from "@/lib/mock-data";
+import { openRateTrend, ctrTrend, channelPerformance } from "@/lib/static-data";
+import { num } from "@/lib/utils";
 import { useDashboardSummary } from "@/hooks/use-dashboard";
 import { useCampaigns } from "@/hooks/use-campaigns";
 
