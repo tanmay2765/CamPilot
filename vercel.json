@@ -2,11 +2,5 @@
   "buildCommand": "cd frontend && npm run build",
   "outputDirectory": "frontend/.vercel/output",
   "framework": null,
-  "installCommand": "cd frontend && npm install",
-  "rewrites": [
-    {
-      "source": "/api/:path*",
-      "destination": "https://campaign-copilot.onrender.com/:path*"
-    }
-  ]
+  "installCommand": "cd frontend && npm install"
 }
